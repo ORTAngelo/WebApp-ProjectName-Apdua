@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Order Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Coffee Shop Order Form</h1>
+        <form method="POST" action="order.php">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="coffee">Coffee Type:</label>
+            <select id="coffee" name="coffee" required>
+                <option value="espresso">Espresso - ₱150</option>
+                <option value="latte">Latte - ₱180</option>
+                <option value="cappuccino">Cappuccino - ₱200</option>
+                <option value="americano">Americano - ₱220</option>
+                <option value="mocha">Mocha - ₱190</option>
+            </select>
+
+            <div class="input-group">
+                <label>Size:</label>
+                <input type="radio" id="small" name="size" value="small" required>
+                <label for="small">Small: +₱30</label>
+
+                <input type="radio" id="medium" name="size" value="medium">
+                <label for="medium">Medium: +₱50</label>
+
+                <input type="radio" id="large" name="size" value="large">
+                <label for="large">Large: +₱80</label>
+            </div>
+
+            <div class="input-group">
+                <label for="extras">Extras:</label>
+                <input type="checkbox" id="sugar" name="extras" value="sugar">
+                <label for="sugar">Sugar: +₱3.25</label>
+
+                <input type="checkbox" id="cream" name="extras" value="cream">
+                <label for="cream">Cream: +₱5.85</label>
+            </div>
+
+            <label for="instructions">Special Instructions:</label>
+            <textarea id="instructions" name="instructions" rows="2"></textarea>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+    
+</body>
+
+</html>
